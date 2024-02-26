@@ -6,15 +6,15 @@ on:
       FIRMWARE_DUMP_REPO:
         description: 'Firmware Dump Repository URL'
         required: true
-        default: 'https://gitlab.com/kelexine/tecno-spark-8c-kg5j-rom-dump.git'
+        default: 'https://dumps.tadiphone.dev/dumps/infinix/infinix-x6816d/-/tree/X6816D-ST683JKR-R-OP-230411V10'
       FIRMWARE_DUMP_BRANCH:
         description: 'Firmware Dump Repository Branch'
         required: true
-        default: 'main'
+        default: 'X6816D-ST683JKR-R-OP-230411V10'
       DEVICE_TREE_REPO:
         description: 'Device Tree Repository URL'
         required: true
-        default: 'https://github.com/kelexine/android_device_tecno_KG5j'
+        default: 'https://github.com/Veynamer/device_infinix_X6816D'
       DEVICE_TREE_BRANCH:
         description: 'Device Tree Repository Branch'
         required: true
@@ -22,19 +22,19 @@ on:
       DEVICE_CODENAME:
         description: 'Device Codename'
         required: true
-        default: 'KG5j'
+        default: 'X6816D'
       DEVICE_VENDORNAME:
         description: 'Device Vendor Name'
         required: true
-        default: 'tecno'
+        default: 'infinix'
       USER_NAME:
         description: 'Name in Github Account'
         required: true
-        default: 'kelexine'
+        default: 'Veynamer'
       USER_EMAIL:
         description: 'E-mail in Github Account'
         required: true
-        default: 'frankiekelechi@gmail.com'
+        default: 'panferovvladimir62@gmail.com'
 
 jobs:
   build:
