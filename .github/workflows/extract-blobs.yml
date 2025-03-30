@@ -6,35 +6,35 @@ on:
       FIRMWARE_DUMP_REPO:
         description: 'Firmware Dump Repository URL'
         required: true
-        default: 'https://dumps.tadiphone.dev/dumps/infinix/infinix-x6816d.git'
+        default: 'https://github.com/shahqufi/TECNO-TECNO-LI9.git'
       FIRMWARE_DUMP_BRANCH:
         description: 'Firmware Dump Repository Branch'
         required: true
-        default: 'X6816D-ST683JKR-R-OP-230411V10'
+        default: 'main'
       DEVICE_TREE_REPO:
         description: 'Device Tree Repository URL'
         required: true
-        default: 'https://github.com/Veynamer/device_infinix_X6816D'
+        default: 'https://github.com/shahqufi/android_device_tecno_LI9.git'
       DEVICE_TREE_BRANCH:
         description: 'Device Tree Repository Branch'
         required: true
-        default: 'android-11'
+        default: 'main'
       DEVICE_CODENAME:
         description: 'Device Codename'
         required: true
-        default: 'X6816D'
+        default: 'li9'
       DEVICE_VENDORNAME:
         description: 'Device Vendor Name'
         required: true
-        default: 'infinix'
+        default: 'tecno'
       USER_NAME:
         description: 'Name in Github Account'
         required: true
-        default: 'Veynamer'
+        default: 'shahqufi'
       USER_EMAIL:
         description: 'E-mail in Github Account'
         required: true
-        default: 'panferovvladimir62@gmail.com'
+        default: 'shahqufi@gmail.com'
 
 jobs:
   build:
