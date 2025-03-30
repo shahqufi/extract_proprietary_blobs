@@ -63,10 +63,13 @@ jobs:
       with:
         swap-size-gb: 12
 
-    - name: Set TMPDIR
-      run: |
-      mkdir -p $HOME/tmp
-      echo "TMPDIR=$HOME/tmp" >> $GITHUB_ENV
+      - name: Set TMPDIR
+        run: |
+          mkdir -p $HOME/tmp
+          echo "TMPDIR=$HOME/tmp" >> $GITHUB_ENV
+
+      - name: Verify TMPDIR
+        run: echo "TMPDIR is set to $TMPDIR"
       
     - name: Prepare GithubCLI
       run: |
