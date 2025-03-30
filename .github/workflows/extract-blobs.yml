@@ -63,6 +63,11 @@ jobs:
       with:
         swap-size-gb: 12
 
+    - name: Set TMPDIR
+      run: |
+      mkdir -p $HOME/tmp
+      echo "TMPDIR=$HOME/tmp" >> $GITHUB_ENV
+      
     - name: Prepare GithubCLI
       run: |
         type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -103,7 +108,17 @@ jobs:
         bash extract-files.sh ${GITHUB_WORKSPACE}/workspace/firmware-dump/
         echo "Done extracting and making files."
         echo "Pushing as repository now."
-        
+
+    - name: Free Up Disk Space
+      run: |
+      echo "Before cleanup:"
+      df -h
+      sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet /usr/local/share/boost
+      sudo apt-get clean
+      sudo rm -rf /var/lib/apt/lists/*
+      echo "After cleanup:"
+      df -h
+  
     - name: Push to Github as Repository
       run: |
         cd workspace/android/vendor/${{ env.DVN }}/${{ env.DCN }}
